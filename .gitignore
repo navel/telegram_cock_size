@@ -1,0 +1,7 @@
+venv*
+env*
+yarn.lock
+.idea
+node_modules*
+requirements.txt
+config.ini
