@@ -52,16 +52,17 @@ def get_smile(size: int) -> str:
         return '😱'
 
 
-
 def get_size(update: Update, context: CallbackContext) -> None:
     size = calculate_cock_size(update.inline_query.from_user.id)
     msg_txt = 'My cock size is *' + str(size) + 'cm* ' + get_smile(size)
 
+    thumb = config.get('DEFAULT', 'thumb')
     result = [
         InlineQueryResultArticle(
             id=str(update.inline_query.from_user.id),
             title="Share your cock size",
             input_message_content=InputTextMessageContent(message_text=msg_txt, parse_mode='MARKDOWN'),
+            thumb_url=thumb
         )]
     print(update.inline_query.from_user.username, size)
     update.inline_query.answer(result, cache_time=0)
