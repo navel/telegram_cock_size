@@ -1,0 +1,8 @@
+[DEFAULT]
+# Your bot token from @BotFather
+token=YOUR_BOT_TOKEN_HERE
+
+# Thumbnail URL for inline queries
+# Recommended size: 320x320 pixels (square format)
+# Supported formats: JPG, PNG, GIF, WebP
+thumb=http://example.com/thumb.jpg
