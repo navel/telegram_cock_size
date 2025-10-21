@@ -160,8 +160,8 @@ class CockSizeBot:
         # Create inline result with text message
         result = InlineQueryResultArticle(
             id=str(user_id),
-            title=f"📏 Cock size: {size}cm {emoji}",
-            description=f"Share your cock size: {size}cm",
+            title=f"Cock size bot",
+            description=f"Share your cock size",
             input_message_content=InputTextMessageContent(
                 message_text=message_text,
                 parse_mode='MARKDOWN'
