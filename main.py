@@ -49,6 +49,9 @@ class CockSizeBot:
             format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
             level=logging.INFO
         )
+        # Disable verbose HTTP logging from httpx and httpcore
+        logging.getLogger('httpx').setLevel(logging.WARNING)
+        logging.getLogger('httpcore').setLevel(logging.WARNING)
         self.logger = logging.getLogger(__name__)
         
     def _get_thumbnail_url(self) -> Optional[str]:
