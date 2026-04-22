@@ -95,7 +95,7 @@ class CockSizeBot:
         results = []
         
         for i in range(1, 4):  # 3 iterations for averaging
-            hash_value = self._daily_hash_parser(f'cock{i}{user_id}')
+            hash_value = self._daily_hash_parser(f'cockk{i}{user_id}')
             u = math.sin(hash_value)
             
             try:
